@@ -5,7 +5,16 @@
   text-align: center;
 }
 
-.logo {
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -39,4 +48,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

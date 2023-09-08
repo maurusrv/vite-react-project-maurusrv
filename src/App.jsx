@@ -1,18 +1,15 @@
-import Button from '../src/components/Button'
+import LoginForm from "./components/LoginForm"
+import './App.css'
 
 function App() {
-
-  const isHidden = false
-
-  return ( // return value, JSX elements (DOM elements but not really dom tags)
-    <>
-      <div>Hello, World!</div>
-      <Button 
-        label="Submit"
-        onClick={() => { console.log('Hello') }}
-        isHidden={isHidden}
-      />
-    </>   
+  return (
+    <div className="container">
+      <header>Bank Mo</header>
+      <main>
+        <LoginForm />
+      </main>      
+      <footer>Copyright 2023</footer>
+    </div>   
   )
 }
 
