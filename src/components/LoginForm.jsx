@@ -32,7 +32,7 @@ const LoginForm = () => {
 
 
   return (
-    <form className="container">
+    <form className="flex flex-col border-solid border-2 p-10">
       <Input
         key="username"
         label="Username"

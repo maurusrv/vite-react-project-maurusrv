@@ -1,10 +1,11 @@
 import LoginForm from "./components/LoginForm"
 import './App.css'
+import Header from "./components/Header"
 
 function App() {
   return (
-    <div className="container">
-      <header>Bank Mo</header>
+    <div className="flex flex-col border-solid border-2 p-10">
+      <Header />
       <main>
         <LoginForm />
       </main>      

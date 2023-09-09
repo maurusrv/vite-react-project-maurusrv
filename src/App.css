@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -10,8 +10,11 @@
   flex-direction: column;
   border: 1px solid black;
   padding: 10px;
-}
+} */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 /* .logo {

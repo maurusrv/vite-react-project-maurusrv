@@ -7,6 +7,7 @@ const Input = (props) => {
     <>
       <label>{label}</label>
       <input 
+        className="border-2"
         id={id} 
         title={label} 
         type={type}
