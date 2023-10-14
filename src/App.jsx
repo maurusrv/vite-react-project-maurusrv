@@ -42,50 +42,58 @@ import './App.css'
 // }
 
 import { useState, useEffect } from 'react'
+import Fetch from './components/Fetch'
+
 
 function App () {
-  // Direct User triggers
-  const [count, setCount] = useState(0) // 3. What triggers UI change?
-
-  // Side-effect / Events not depending on user trigger
-  useEffect(() => { 
-    console.log('Checking if even number...')
-    if (count % 2 === 0) {
-      console.log('Even number!')
-    }
-  }, [count]) // on mount
-
-  const [loggedInUser, setLoggedInUser] = useState()
-  const [newExpenseItem] = useState([])
-
-  useEffect(() => {
-    setLoggeInUser({
-      ...loggedInUser,
-      balance: loggedInUser.balance - newExpenseItem.cost
-    })
-    
-  }, [newExpenseItem])
-
-
-  // Eventhandler
-  const onClickButton = () => { // 2. What should the user action do? / Event trigger
-    // it should increment to the number being shown
-    setCount(prevCount => prevCount + 1)
-  }
-
-  const onClickAnotherButton = () => {
-    const newCount = count + 1;
-    console.log(newCount)
-  }
-
-  return ( // 1. What should the user see / UI
-    <div className="flex flex-col justify-center items-center">
-      <div className="border-2">{count}</div>
-      <br/>
-      <button onClick={onClickButton} className="border-2">Change!</button>
-      <button onClick={onClickAnotherButton} className="border-2">No Change!</button>
-    </div>
+  return (
+    <Fetch />
   )
 }
+
+// function App () {
+//   // Direct User triggers
+//   const [count, setCount] = useState(0) // 3. What triggers UI change?
+
+//   // Side-effect / Events not depending on user trigger
+//   useEffect(() => { 
+//     console.log('Checking if even number...')
+//     if (count % 2 === 0) {
+//       console.log('Even number!')
+//     }
+//   }, [count]) // on mount
+
+//   const [loggedInUser, setLoggedInUser] = useState()
+//   const [newExpenseItem] = useState([])
+
+//   useEffect(() => {
+//     setLoggeInUser({
+//       ...loggedInUser,
+//       balance: loggedInUser.balance - newExpenseItem.cost
+//     })
+    
+//   }, [newExpenseItem])
+
+
+//   // Eventhandler
+//   const onClickButton = () => { // 2. What should the user action do? / Event trigger
+//     // it should increment to the number being shown
+//     setCount(prevCount => prevCount + 1)
+//   }
+
+//   const onClickAnotherButton = () => {
+//     const newCount = count + 1;
+//     console.log(newCount)
+//   }
+
+//   return ( // 1. What should the user see / UI
+//     <div className="flex flex-col justify-center items-center">
+//       <div className="border-2">{count}</div>
+//       <br/>
+//       <button onClick={onClickButton} className="border-2">Change!</button>
+//       <button onClick={onClickAnotherButton} className="border-2">No Change!</button>
+//     </div>
+//   )
+// }
 
 export default App
